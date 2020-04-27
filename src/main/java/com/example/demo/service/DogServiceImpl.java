@@ -41,26 +41,22 @@ public class DogServiceImpl implements DogService {
     public List<String> retrieveDogNames() {
         return (List<String>) dogRepository.findAllName();
     }
-
-    public List<Dog> save(Dog dog){
-        dogRepository.insertDog(dog);
-        return (List<Dog>) dogRepository.findAll();
-    }
-
-//    public void saveOrUpdate(Dog dog)
-//    {
-//        DogRepository.save(dog);
+//
+//    public List<Dog> save(Dog dog){
+//        dogRepository.insertDog(dog);
+//        return retrieveDogs();
 //    }
+
+//
     //deleting a specific record by using the method deleteById() of CrudRepository
-    public List<Dog> delete(Long id)
-    {
-        dogRepository.deleteById(id);
-        return (List<Dog>) dogRepository.findAll();
-    }
-//    //updating a record
-    public List<Dog> update(Dog dog)
-    {
-        dogRepository.update(dog);
-        return (List<Dog>) dogRepository.findAll();
-    }
+//    public void delete(Long id)
+//    {
+//        dogRepository.deleteById(id);
+//    }
+////    //updating a record
+//    public List<Dog> update(Dog dog)
+//    {
+//        dogRepository.update(dog);
+//        return retrieveDogs();
+//    }
 }

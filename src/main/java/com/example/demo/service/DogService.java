@@ -20,7 +20,7 @@ public interface DogService {
     List<String> retrieveDogBreed();
     String retrieveDogBreedById(Long id);
     List<String> retrieveDogNames();
-    List<Dog> save(Dog dog);
-    List<Dog> delete(Long id);
-    List<Dog> update(Dog dog);
+//    List<Dog> save(Dog dog);
+//    void delete(Long id);
+//    List<Dog> update(Dog dog);
 }

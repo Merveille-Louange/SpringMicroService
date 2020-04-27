@@ -55,34 +55,28 @@ public class DogController {
     @GetMapping("/dogs/name")
     public ResponseEntity<List<String>> getDogNames() {
         List<String> list = dogService.retrieveDogNames();
-        return new ResponseEntity<List<String>>(list, HttpStatus.OK);
+        return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
-    @PostMapping("/add_dog")
-    public List<Dog> save(@RequestBody Dog dog){
-        dogService.save(dog);
-        return dogService.retrieveDogs();
-    }
-    @DeleteMapping("/dogs/{id}")
-    private List<Dog> deleteDog(@PathVariable("id") Long id)
-    {
-        dogService.delete(id);
-        return dogService.retrieveDogs();
-
-    }
-//
-//    @PostMapping("/books")
-//    private int saveDog(@RequestBody Dog dogs)
-//    {
-//        DogService.saveOrUpdate(dogs);
-//        return dogs.getdogid();
+//    @PostMapping("/add_dog")
+//    public List<Dog> save(@RequestBody Dog dog){
+//        dogService.save(dog);
+//        return dogService.retrieveDogs();
 //    }
-    //creating put mapping that updates the dog detail
-    @PutMapping("/books")
-    private List<Dog> update(@RequestBody Dog dog)
-    {
-        dogService.update(dog);
-        return dogService.retrieveDogs();
-    }
+//    @DeleteMapping("/dogs/{id}")
+//    public void  deleteDog(@PathVariable("id") Long id)
+//    {
+//        dogService.delete(id);
+//
+//    }
+////
+//
+//    //creating put mapping that updates the dog detail
+//    @PutMapping("/dogs/{id}")
+//    public List<Dog> update(@RequestBody Dog dog)
+//    {
+//        dogService.update(dog);
+//        return dogService.retrieveDogs();
+//    }
 }
 

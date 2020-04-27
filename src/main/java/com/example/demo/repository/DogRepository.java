@@ -31,20 +31,19 @@ public interface DogRepository extends CrudRepository<Dog, Long> {
     List<String> findAllName();
 
 
-    @Modifying
-    @Query(value = "insert into Dog (name, breed, origin) VALUES (dog.name, dog.breed, dog.origin)", nativeQuery = true)
-    List<Dog> insertDog(@Param("dog") Dog dog);
-
-
-   @Query("DELETE FROM Dog d WHERE d.id=:id")
-   void deleteById(Long id);
+//    @Modifying
+//    @Query(value = "insert into Dog ( name, breed, origin) VALUES ( dog.name, dog.breed, dog.origin)", nativeQuery = true)
+//    List<Dog> insertDog(@Param("dog")Dog dog);
 //
-    
-    @Query("UPDATE Dog SET name = dog.name, breed = dog.breed, origin=dog.origin WHERE dog.id=:id")
-    List<Dog> update(@Param("dog") Dog dog) ;
 //
-//    @Query(" INSERT INTO Dog (id, name, breed,origin) VALUES (d.id, d.name, d.breed,d.origin)")
-//    void save(Dog dog);
+//   @Query("DELETE FROM Dog d WHERE d.id=:id")
+//   void deleteById(Long id);
+////
+//    @Modifying
+//    @Query(value ="UPDATE Dog SET  name = dog.name, breed = dog.breed, origin=dog.origin WHERE dog.id=:id", nativeQuery = true)
+//    List<Dog> update(@Param("dog") Dog dog) ;
+////
+//
 
     }
 
